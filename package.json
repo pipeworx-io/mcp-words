@@ -1,18 +1,32 @@
 {
   "name": "@pipeworx/mcp-words",
-  "version": "1.0.0",
-  "description": "MCP server for word synonyms, rhymes, and language tools via Datamuse",
+  "version": "1.0.1",
+  "description": "Words MCP — wraps Datamuse API (free, no auth required)",
+  "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
-  "files": ["src"],
-  "scripts": {
-    "build": "tsc",
-    "check": "tsc --noEmit"
+  "bin": {
+    "mcp-words": "bin/cli.js"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "words"],
-  "author": "Pipeworx",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-words.git"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-ea05074f4413c29a1718793f4494750e9a2af45763fac24a1636fa32415b7f6a",
+    "sourceCommit": "b0fb3c31386cf0256dcf1e2f1b3440435a87ec35"
   }
 }
